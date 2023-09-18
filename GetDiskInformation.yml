@@ -1,0 +1,10 @@
+- hosts: all
+  gather_facts: true
+  tasks:
+    - name: Check if WinRM is configured and server is accessible
+      ansible.windows.win_ping:
+    - name: Run basic PowerShell script
+      ansible.windows.win_powershell:
+        script: |
+          Get-Disk
+          Get-Volume
