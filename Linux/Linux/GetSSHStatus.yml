@@ -1,0 +1,9 @@
+- name: Shell Examples
+    hosts: all
+    tasks:
+
+    - name: Test get hostname
+      shell:
+         "hostname"
+      register: lsout
+      tags: lsout
